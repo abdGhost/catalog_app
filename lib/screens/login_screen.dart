@@ -13,7 +13,7 @@ class _LoginScreenState extends State<LoginScreen> {
   final _formKey = GlobalKey<FormState>();
 
   moveToHome(BuildContext context) async {
-    if (_formKey.currentState!.validate()) {
+    if (_formKey.currentState.validate()) {
       setState(() {
         changeButton = true;
       });
@@ -68,7 +68,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         setState(() {});
                       },
                       validator: (value) {
-                        if (value!.isEmpty) {
+                        if (value.isEmpty) {
                           return "Username cannot be empty";
                         }
                         return null;
@@ -81,7 +81,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         labelText: 'Password',
                       ),
                       validator: (value) {
-                        if (value!.isEmpty) {
+                        if (value.isEmpty) {
                           return "Password cannot be empty";
                         } else if (value.length < 6) {
                           return "Password should be atleast 6 Char";
