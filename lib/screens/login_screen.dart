@@ -1,6 +1,7 @@
 import 'package:catelog_app/screens/home_screen.dart';
 import 'package:catelog_app/utils/routes.dart';
 import 'package:flutter/material.dart';
+import 'package:velocity_x/src/extensions/context_ext.dart';
 
 class LoginScreen extends StatefulWidget {
   @override
@@ -28,7 +29,7 @@ class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
     return Material(
-      color: Colors.white,
+      color: context.canvasColor,
       child: SingleChildScrollView(
         child: Form(
           key: _formKey,
@@ -93,7 +94,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       height: 40,
                     ),
                     Material(
-                      color: Colors.deepPurple,
+                      color: context.theme.buttonColor,
                       borderRadius:
                           BorderRadius.circular(changeButton ? 50 : 8),
                       child: InkWell(
