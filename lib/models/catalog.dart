@@ -1,7 +1,20 @@
 import 'package:flutter/cupertino.dart';
 
 class CatalogModel {
+  static final catModel = CatalogModel.internal();
+
+  CatalogModel.internal();
+  factory CatalogModel() => catModel;
+
   static List<Item> items;
+
+  //Get Item by ID
+  Item getById(int id) =>
+      items.firstWhere((element) => element.id == id, orElse: null);
+
+  //Get item by position
+
+  Item getByPosition(int pos) => items[pos];
 }
 
 class Item {

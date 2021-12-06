@@ -11,7 +11,7 @@ class MyTheme {
         buttonColor: darkBluishColor,
         accentColor: darkBluishColor,
         appBarTheme: const AppBarTheme(
-          color: Colors.white,
+          color: Colors.black,
           elevation: 0.0,
           iconTheme: IconThemeData(color: Colors.black),
           titleTextStyle: TextStyle(
@@ -29,13 +29,14 @@ class MyTheme {
         appBarTheme: const AppBarTheme(
           color: Colors.black,
           elevation: 0.0,
-          iconTheme: IconThemeData(color: Colors.white),
+          iconTheme: IconThemeData(color: Colors.black),
           titleTextStyle: TextStyle(
-              color: Colors.black, fontSize: 18, fontWeight: FontWeight.bold),
+            color: Colors.black,
+          ),
         ),
       ));
 
-  static Color creamColor = Color(0xfff5f5f5);
+  static Color creamColor = const Color(0xfff5f5f5);
   static Color darkCreamColor = Vx.gray900;
 
   static Color lightBluishColor = Vx.indigo500;
